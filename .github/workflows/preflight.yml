@@ -1,0 +1,20 @@
+name: GTM Preflight
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run strict preflight
+        run: npm run gtm:preflight:strict

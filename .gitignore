@@ -1,3 +1,10 @@
-node_modules/
 .DS_Store
-release/
+*.log
+*.tmp
+*.swp
+*~
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

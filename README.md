@@ -66,8 +66,13 @@ Brand mode:
 2. Preflight strict (fails if URL placeholders are still unresolved):
    `npm run gtm:preflight:strict`
 3. Apply live URLs:
-   `node docs/listing-gtm/scripts/apply-live-urls.mjs --landing <...> --proof <...> --rules <...>`
+   `node scripts/apply-live-urls.mjs --landing <...> --proof <...> --rules <...>`
 4. Update proof feed after each verified event:
-   `node docs/listing-gtm/scripts/update-proof-feed.mjs --retirement-id <...> --tx-hash <...> --certificate-url <...> --credits <...> --notes "<...>"`
+   `node scripts/update-proof-feed.mjs --retirement-id <...> --tx-hash <...> --certificate-url <...> --credits <...> --notes "<...>"`
 5. Create release bundle for publisher handoff:
    `npm run gtm:bundle`
+
+## Repo Hygiene
+1. Ownership and review are enforced through `.github/CODEOWNERS`.
+2. Use `.github/pull_request_template.md` for risk/rollback-ready PRs.
+3. Use `.github/workflows/preflight.yml` to gate PRs with strict preflight.

@@ -1,0 +1,17 @@
+{
+  "name": "regen-listing-gtm",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Operational GTM artifacts and web assets for Regen listing readiness.",
+  "license": "MIT",
+  "scripts": {
+    "gtm:preflight": "node scripts/preflight-check.mjs",
+    "gtm:preflight:strict": "node scripts/preflight-check.mjs --strict",
+    "gtm:bundle": "node scripts/create-release-bundle.mjs",
+    "gtm:update-proof-feed": "node scripts/update-proof-feed.mjs",
+    "gtm:apply-live-urls": "node scripts/apply-live-urls.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
